@@ -6,8 +6,16 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-0-brightgreen?style=for-the-badge)
 ![License MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+---
+
+## 🌐 Demonstração Online (GitHub Pages)
+
+Acesse a aplicação em tempo real diretamente pelo navegador:  
+👉 **[https://amlxcom26-art.github.io/quiz-computacional/](https://amlxcom26-art.github.io/quiz-computacional/)**
 
 ---
 
@@ -77,6 +85,15 @@ Em seguida, abra o navegador em: [http://localhost:8000](http://localhost:8000)
 
 ### Opção 2: Abertura Direta (Sem Servidor)
 Basta dar um duplo clique no arquivo [`index.html`](index.html) ou abri-lo pelo navegador (`file:///caminho/para/index.html`). O mecanismo de *fallback* embutido carregará o quiz imediatamente.
+
+### Opção 3: Publicação no GitHub Pages
+O projeto já está 100% preparado com `.nojekyll`, caminhos relativos e workflow do GitHub Actions (`.github/workflows/deploy.yml`):
+1. Acesse o seu repositório no GitHub: **[amlxcom26-art/quiz-computacional](https://github.com/amlxcom26-art/quiz-computacional)**
+2. Clique na aba **Settings** (Configurações) > **Pages** (no menu lateral esquerdo).
+3. Na seção **Build and deployment**:
+   - Em **Source**, selecione **GitHub Actions** (para deploy automático contínuo via workflow) OU **Deploy from a branch** (selecionando a branch `main` e pasta `/ (root)`).
+4. Em instantes, sua aplicação estará no ar no endereço:  
+   👉 **[https://amlxcom26-art.github.io/quiz-computacional/](https://amlxcom26-art.github.io/quiz-computacional/)**
 
 ---
 
