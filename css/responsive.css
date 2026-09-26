@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Quiz Computacional - Estilos Responsivos & Acessibilidade
+   Design Mobile-First com otimização para toque e telas menores
+   ========================================================================== */
+
+/* Telas Médias / Tablets e Smartphones (<= 640px) */
+@media (max-width: 640px) {
+  body {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .quiz-container {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .quiz-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .quiz-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Barra Numérica Otimizada para Toque */
+  .nav-question-list {
+    gap: 0.35rem;
+  }
+
+  .nav-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.825rem;
+    touch-action: manipulation;
+  }
+
+  .question-statement {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Alternativas com área de toque mínima de 48px */
+  .alternative-item {
+    min-height: 48px;
+    padding: 0.75rem 0.875rem;
+    font-size: 0.95rem;
+    touch-action: manipulation;
+  }
+
+  .alternative-letter {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.8rem;
+    margin-right: 0.65rem;
+  }
+
+  /* Botões de Ação Mobile */
+  .actions-bar {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    touch-action: manipulation;
+  }
+
+  /* Grade de Resultados */
+  .score-card {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .score-stat {
+    padding: 1rem;
+  }
+
+  .score-stat .stat-value {
+    font-size: 1.75rem;
+  }
+}
+
+/* Telas Muito Pequenas (<= 380px) */
+@media (max-width: 380px) {
+  .quiz-title {
+    font-size: 1.2rem;
+  }
+
+  .nav-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.75rem;
+  }
+
+  .question-statement {
+    font-size: 1rem;
+  }
+
+  .alternative-item {
+    font-size: 0.875rem;
+  }
+}
+
+/* Acessibilidade: Navegação por Teclado e Foco Visível */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.alternative-item:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.nav-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Redução de movimento para preferências de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

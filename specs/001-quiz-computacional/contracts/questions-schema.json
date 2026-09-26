@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QuestionsDatabase",
+  "description": "Schema de validação para a base de dados de questões do Quiz Computacional",
+  "type": "array",
+  "minItems": 10,
+  "maxItems": 10,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "statement",
+      "alternatives",
+      "correctAlternativeId",
+      "explanation"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^q[0-9]{2,}$",
+        "description": "Identificador único da questão"
+      },
+      "statement": {
+        "type": "string",
+        "minLength": 10,
+        "description": "Texto do enunciado da questão"
+      },
+      "alternatives": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "description": "Exatamente quatro alternativas de resposta",
+        "items": {
+          "type": "object",
+          "required": ["id", "text"],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Identificador da alternativa"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Texto da alternativa"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "correctAlternativeId": {
+        "type": "string",
+        "description": "Identificador da alternativa correta única"
+      },
+      "explanation": {
+        "type": "string",
+        "minLength": 10,
+        "description": "Explicação didática da resolução da questão"
+      }
+    },
+    "additionalProperties": false
+  }
+}

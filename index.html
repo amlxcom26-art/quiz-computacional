@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz Computacional - Aplicação web interativa para prática de conceitos fundamentais de computação">
+  <title>Quiz Computacional</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main id="app" class="quiz-container">
+    <!-- Cabeçalho com Título e Barra Numérica de Navegação -->
+    <header class="quiz-header">
+      <h1 class="quiz-title">Quiz Computacional</h1>
+      <nav aria-label="Navegação de Questões" class="question-nav">
+        <ol id="nav-question-list" class="nav-question-list">
+          <!-- 10 botões de questão gerados dinamicamente (1 a 10) -->
+        </ol>
+      </nav>
+    </header>
+
+    <!-- Visualização do Quiz (Questão Ativa) -->
+    <section id="quiz-view" class="view-section" aria-labelledby="question-statement">
+      <div class="question-progress" id="question-progress-label" aria-live="polite">Questão 1 de 10</div>
+      <h2 class="question-statement" id="question-statement">Carregando questão...</h2>
+      
+      <div class="alternatives-group" id="alternatives-container" role="radiogroup" aria-labelledby="question-statement">
+        <!-- 4 botões de alternativas gerados dinamicamente -->
+      </div>
+
+      <!-- Área de Feedback Imediato -->
+      <div id="feedback-container" class="feedback-container hidden" aria-live="polite">
+        <div id="feedback-badge" class="feedback-badge"></div>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+      </div>
+
+      <!-- Barra de Ações -->
+      <div class="actions-bar">
+        <button id="btn-confirm" class="btn btn-primary" type="button" disabled>Confirmar Resposta</button>
+        <button id="btn-next" class="btn btn-secondary hidden" type="button">Próxima Questão</button>
+      </div>
+    </section>
+
+    <!-- Visualização dos Resultados Finais -->
+    <section id="results-view" class="view-section results-view hidden" aria-labelledby="results-title">
+      <h2 id="results-title" class="results-title">Desempenho Final</h2>
+      <div class="score-card">
+        <div class="score-stat stat-percentage">
+          <span class="stat-value" id="stat-percentage">0%</span>
+          <span class="stat-label">Aproveitamento</span>
+        </div>
+        <div class="score-stat stat-correct">
+          <span class="stat-value" id="stat-correct">0</span>
+          <span class="stat-label">Acertos</span>
+        </div>
+        <div class="score-stat stat-incorrect">
+          <span class="stat-value" id="stat-incorrect">0</span>
+          <span class="stat-label">Erros</span>
+        </div>
+      </div>
+      <div id="results-feedback-message" class="results-feedback-message">
+        <!-- Mensagem pedagógica por faixa de desempenho -->
+      </div>
+      <div class="actions-bar" style="justify-content: center;">
+        <button id="btn-restart" class="btn btn-primary btn-large" type="button">Reiniciar Quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/ui/quiz-ui.js"></script>
+</body>
+</html>

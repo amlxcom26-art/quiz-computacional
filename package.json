@@ -1,0 +1,17 @@
+{
+  "name": "quiz-computacional",
+  "version": "1.0.0",
+  "description": "Aplicação web educacional para prática de conhecimentos básicos de computação",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/questions-data.test.js tests/quiz-engine.test.js"
+  },
+  "keywords": [
+    "quiz",
+    "educacional",
+    "computacao",
+    "vanilla-js"
+  ],
+  "author": "",
+  "license": "MIT"
+}
